@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+<link rel="stylesheet" href="recipe.css">
+
+<script>
+window.onload = function () {
+  document.geteElementById("setNum").onchange = setNum;
+}
+
+function setNum(e) {
+ var num = parseInt(e.target.value);
+ var v0 = num, v1 = 0.5 * num, v2 = 100 * num;
+document.geteElementById("i0").textContent = V0;
+document.geteElementById("i1").textContent = V1;
+document.geteElementById("i2").textContent = V2;
+document.geteElementById("num").textContent = num;
+}
+</script>
+
+</head>
+<body>
+<h2>ジャーマンポテトに必要な食材を自動計算してみよう！</h2>
+<p>
+  <input id="setNum" type="range" min="1" max="5" value="1"/>
+  <span id="num">1</span>人前
+</p>
+<h2>タブを左右に動かすと、必要な分量を変えることが出来るよ<h2>
+
+<table>
+<tr>
+  <td rowspan="2">
+     <img src="image/potato.jpg" >
+  </td>
+
+  <td>
+    <h3>材料</h3>
+    <ul>
+     <li>ジャガイモ　<span id="i0">1</span>個</li>
+     <li>玉ねぎ　<span id="i1">0.5</span>個</li>
+     <li>ベーコン　<span id="i2">100</span>g</li>
+     <li>パセリ　少々　</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+       <h3>作り方</h3>
+      <ol>
+      <li>ジャガイモと玉ねぎを薄切りにします</li>
+      <li>ベーコン、ジャガイモ、玉ねぎの順で炒めます</li>
+      <li>塩コショウで味を調えます</li>
+      <li>盛り付けてパセリを振りかけて出来上がり！</li>
+      </ol>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
